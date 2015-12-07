@@ -19,6 +19,10 @@ var Header = React.createClass({
         }
     },
 
+    _toggleMenu: function() {
+        this.refs.leftNav.toggle();
+    },
+
     render() {
 
         var menuItems = [
@@ -50,8 +54,8 @@ var Header = React.createClass({
 
         return (
             <div>
-                <AppBar title="Slackie" />
-                <LeftNav ref="leftNav" docked={true} menuItems={menuItems} onChange={this._onMenuItemChange} />
+                <AppBar title="Slackie" onTouchTap={this._toggleMenu} />
+                <LeftNav ref="leftNav" docked={false} menuItems={menuItems} onChange={this._onMenuItemChange} />
             </div>
         );
     }
