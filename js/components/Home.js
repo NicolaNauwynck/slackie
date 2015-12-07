@@ -5,6 +5,9 @@ import mui from 'material-ui';
 // Stores
 import UserStore from './../stores/UserStore';
 
+// Components
+import Logout from './../components/Logout.js';
+
 // get State
 function getStateFromStores() {
     return {
@@ -33,6 +36,7 @@ var HomeRoute = React.createClass({
         	<div className="user">
             <img src="https://cdn.auth0.com/blog/react-js/react.png" />
 	    		<h1>{this.state.loggedInUser}</h1>
+                <Logout />
 
 	    	</div>
         );
