@@ -33,5 +33,13 @@ module.exports = {
         }, function(error) {
             console.log(error);
         });
+    },
+
+    socketCreateMessage: function(user, message, roomId, type, date) {
+        $.connection.hub.url = "http://slackie.azurewebsites.net/signalr";
+        $.connection.hub.start().done(function() {
+            var chat = $.connection.chatHub;
+            chat.server.send(user, message, roomId, type, date);
+        });
     }
 };

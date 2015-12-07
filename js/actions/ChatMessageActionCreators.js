@@ -14,4 +14,8 @@ module.exports = {
         APIUtils.getAllMessagesByRoom(roomId);
     },
 
+	createMessage: function(user, message, room) {
+        APIUtils.socketCreateMessage(user, message, room);
+    }
+
 };

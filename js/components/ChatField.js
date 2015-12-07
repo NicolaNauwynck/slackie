@@ -19,6 +19,21 @@ var ChatField = React.createClass({
         return getStateFromStores();
     },
 
+    _sendMessage: function() {
+        var room = this.props.room,
+            message = this.refs.chatField.getValue(),
+            user = this.props.loggedInUser;
+
+        if(room && message && user) {
+            ChatMessageActionCreator.createMessage(user, message, room, "normal", new Date());
+            //reset field
+            this.refs.chatField.clearValue();
+        }
+        else {
+            console.log('Empty fields');
+        }
+    },
+
     render() {
 
         // React styling
@@ -53,7 +68,7 @@ var ChatField = React.createClass({
                             <TextField ref="chatField" hintText="Say something nice" multiLine={true} />
                         </div>
                         <div style={style.button}>
-                            <RaisedButton label="Send" test='hellowwoerl' />
+                            <RaisedButton label="Send" onClick={this._sendMessage} />
                         </div>
                     </div>
                 </CardText>
