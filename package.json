@@ -1,0 +1,35 @@
+{
+  "name": "React_slack_d01",
+  "version": "1.0.0",
+  "description": "Slack rebuild in ReactJs",
+  "scripts": {
+    "start": "webpack-dev-server --hot --progress --colors --port 8085",
+    "build": "webpack --progress --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/nicolanauwynck/slack-for-district01"
+  },
+  "author": "Jasper De Smet, Nicola Nauwynck",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.3.15",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "flux": "^2.1.1",
+    "keymirror": "^0.1.1",
+    "lodash": "^3.10.1",
+    "material-ui": "~0.13.0",
+    "moment": "^2.10.6",
+    "object-assign": "^4.0.1",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-hot-loader": "^1.3.0",
+    "react-router": "~0.13.0",
+    "react-tap-event-plugin": "^0.2.1",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  }
+}
