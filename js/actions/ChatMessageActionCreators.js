@@ -8,6 +8,10 @@ module.exports = {
 
     joinServer: function(roomId) {
         APIUtils.joinServer(roomId);
-    }
+    },
+
+    getAllMessagesByRoom: function(roomId) {
+        APIUtils.getAllMessagesByRoom(roomId);
+    },
 
 };

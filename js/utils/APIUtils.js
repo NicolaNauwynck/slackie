@@ -25,5 +25,13 @@ module.exports = {
         $.connection.hub.start().done(function() {
             chat.server.joinRoom(roomId);
         });
+    },
+
+    getAllMessagesByRoom: function(roomId) {
+        $.get("http://slackie.azurewebsites.net/api/messages/room/" + roomId).then(function(messages) {
+            ChatServerActionCreators.addMessages(messages);
+        }, function(error) {
+            console.log(error);
+        });
     }
 };

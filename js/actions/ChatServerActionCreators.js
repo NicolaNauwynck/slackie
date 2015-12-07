@@ -11,4 +11,11 @@ module.exports = {
             message: message
         });
     },
+
+    addMessages: function(messages) {
+        ChatAppDispatcher.dispatch({
+            type: ActionTypes.ADD_ALL_MESSAGES,
+            messages: messages
+        });
+    }
 };
