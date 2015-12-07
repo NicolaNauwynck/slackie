@@ -48,7 +48,7 @@ var ChatRoomApp = React.createClass({
     },
 
     getEntityDataIfNeeded: function() {
-        ChatMessageActionCreator.getAllMessagesByRoom(this.context.router.getCurrentParams().id);
+
     },
 
     render() {

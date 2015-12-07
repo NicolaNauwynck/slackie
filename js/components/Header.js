@@ -11,11 +11,6 @@ var Header = React.createClass({
         router: React.PropTypes.func.isRequired
     },
 
-    // Open / close menu
-    _toggleMenu: function() {
-        this.refs.leftNav.toggle();
-    },
-
     // Menu onCLick
     _onMenuItemChange: function(e, key, payload) {
         this.context.router.transitionTo(payload.route, payload.params);
@@ -55,8 +50,8 @@ var Header = React.createClass({
 
         return (
             <div>
-                <AppBar title="Slackie" onLeftIconButtonTouchTap={this._toggleMenu} isInitiallyOpen={true} />
-                <LeftNav ref="leftNav" docked={false} menuItems={menuItems} onChange={this._onMenuItemChange} />
+                <AppBar title="Slackie" />
+                <LeftNav ref="leftNav" docked={true} menuItems={menuItems} onChange={this._onMenuItemChange} />
             </div>
         );
     }

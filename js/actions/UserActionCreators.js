@@ -14,14 +14,6 @@ module.exports = {
         });
     },
 
-    logout: function() {
-        SessionUtils.removeFromSession('loggedInUser');
-        ChatAppDispatcher.dispatch({
-            type: ActionTypes.USER_LOGOUT,
-            user: null
-        });
-    },
-
     receiveLoggedInUser: function() {
         ChatAppDispatcher.dispatch({
             type: ActionTypes.RECEIVE_USER,

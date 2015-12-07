@@ -8,14 +8,6 @@ module.exports = {
 
     joinServer: function(roomId) {
         APIUtils.joinServer(roomId);
-    },
-
-    getAllMessagesByRoom: function(roomId) {
-        APIUtils.getAllMessagesByRoom(roomId);
-    },
-
-    createMessage: function(user, message, room) {
-        APIUtils.socketCreateMessage(user, message, room);
     }
 
 };

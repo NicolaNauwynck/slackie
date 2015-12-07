@@ -14,11 +14,6 @@ var CHANGE_EVENT = 'change';
 // Inital data
 var _messages = {};
 
-// Model functions
-function _addMessages(messages) {
-    _messages = messages;
-}
-
 function _addMessage(message) {
     _messages.push(message);
 }
@@ -56,11 +51,6 @@ var MessageStore = assign({}, EventEmitter.prototype, {
 MessageStore.dispatchToken = ChatAppDispatcher.register(function(action) {
 
     switch(action.type) {
-
-        case ActionTypes.ADD_ALL_MESSAGES:
-            _addMessages(action.messages);
-            MessageStore.emitChange();
-            break;
 
         case ActionTypes.ADD_MESSAGE:
             _addMessage(action.message);

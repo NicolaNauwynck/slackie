@@ -19,10 +19,6 @@ var Login = React.createClass({
         this.setState({showDialog: true});
     },
 
-    _cancelDialog: function() {
-        this.setState({showDialog: false});
-    },
-
     // Dialog submit button OnTouchTap
     _submitDialog: function() {
 
@@ -43,11 +39,6 @@ var Login = React.createClass({
         // Dialog actions
         var customActions = [
             <div key="actions">
-                <FlatButton
-                    key="cancel"
-                    label="Cancel"
-                    primary={false}
-                    onTouchTap={this._cancelDialog} />
                 <FlatButton
                     key="submit"
                     label="Submit"

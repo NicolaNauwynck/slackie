@@ -52,11 +52,6 @@ UserStore.dispatchToken = ChatAppDispatcher.register(function(action) {
             UserStore.emitChange();
             break;
 
-        case ActionTypes.USER_LOGOUT:
-            _setUser(null);
-            UserStore.emitChange();
-            break;
-
         case ActionTypes.RECEIVE_USER:
             _setUser(action.user);
             UserStore.emitChange();
